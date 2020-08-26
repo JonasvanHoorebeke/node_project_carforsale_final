@@ -1,0 +1,67 @@
+
+req.body.idannonce, req.body.marque, req.body.modele, req.body.annee, req.body.kilometrage, req.body.prix, req.body.description, req.body.photo, req.body.codepostal
+<%- include('header.ejs') %>
+<div class="container p-5">
+  <h2 class="introsignup">Vendez ici votre skin et gagnez de l'argent!</h2>
+  <form action="/annonce/save" method="post">
+    <div class="infosignup">
+        <label for="marque" class="nomdescases">Marque:</label>
+        <input type="text" class="form-control" id="marque" placeholder="Armure de niveau 52" name="marque" required autofocus>
+    </div>    
+    <div class="infosignup">
+        <label for="modele" class="nomdescases">Modèle:</label>
+        <input type="text" class="form-control" id="modele" placeholder="Sonic" name="modele" required aria-label="modele">
+    </div>
+    <div class="infosignup">
+        <label for="annee" class="nomdescases">Année:</label>
+        <input type="number" class="form-control" id="annee" placeholder="5 euros" name="annee" required aria-label="annee">
+    </div>
+    <div class="infosignup">
+        <label for="kilometrage" class="nomdescases">Kilométrage:</label>
+        <input type="number" class="form-control" id="kilometrage" placeholder="112750" name="kilometrage" required aria-label="kilometrage">
+    </div>
+    <div class="infosignup">
+        <label for="prix" class="nomdescases">Prix:</label>
+        <input type="number" class="form-control" id="pwd" placeholder="15000 euros" name="prix" required aria-label="prix">
+
+    <div class="infosignup">
+        <label for="description" class="nomdescases">Description:</label>
+        <input type="text" class="form-control" id="description" placeholder="Très bien entretenue" name="description" required aria-label="description">
+    </div>
+    <div class="infosignup">
+        <label for="photo" class="nomdescases">Photo:</label>
+        <input type="image" class="form-control" id="photo" placeholder="Très bien entretenue" name="photo" required aria-label="photo">
+    </div>
+    <div class="infosignup">
+        <label for="codepostal" class="nomdescases">Code postal:</label>
+        <input type="text" class="form-control" id="codepostal" placeholder="1000" name="codepostal" required aria-label="codepostal">
+    </div>
+    <!--div class="infosignup">
+        <label for="idcateg" class="nomdescases">Catégorie: (1 = ancien , 2 = récent, 3 = neuf)</label>
+        <input type="text" class="form-control" id="categ" placeholder="2" name="idcateg" required>
+    </div-->
+    <!--<div class="infosignup">
+        <label for="idcateg" class="nomdescases">Catégorie   :   (1 = ancien , 2 = récent, 3 = neuf)&nbsp&nbsp&nbsp&nbsp</label>
+            <select id="idcateg" name="idcateg" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+    </div>
+    <div class="infosignup">
+        <label for="idrare" class="nomdescases">Catégorie   :   (1 = Commun , 2 = Peu commun, 3 = Rare, 4 = Mythique)&nbsp&nbsp&nbsp&nbsp</label>
+            <select id="idrare" name="idrare" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+    </div>-->
+    <div class="login">
+    <button type="submit" class="btn btn-primary" class="login">Soumettre le skin</button>
+</div>
+</form>
+
+</div>
+</br></br></br></br></br>
+<%- include('footer.ejs') %>

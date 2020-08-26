@@ -1,0 +1,71 @@
+<%- include('header.ejs') %>
+</br>
+</br>
+</br>
+
+<div class="intro">
+</br>
+<input type="text" id="Larecherche" onkeyup="Recherche()" placeholder="Recherchez une annonce...">
+</br></br>
+
+<p>Les annonces de véhicules en vente sur Cars for Sale</p>
+</div>
+<div class="container" id="Lesskins">
+
+ <!--h2><%= title %></h2>-->
+</br></br>
+  <!--<a href="/skin/add" class="btn btn-sm btn-primary">Mettre en vente un véhicule</a><br/>-->
+    <tbody>
+        <% annonce.forEach(function(item){ %>
+            <div class="cards-annonces">
+                <div class="card" style="max-width: 100%;">
+                    <div class="row no-gutters">
+                        <div class="col-sm-5" style="background: #868e96;">
+                            <img src="/css/rsq8.jpg" class="card-img-top h-100" alt="...">
+                        </div>
+                        <div class="col-sm-7">
+                            <div class="card-body">
+                                <h4 class="card-marque-modele"><%= item.marque %> <%= item.modele %></h4>
+                            </br>
+                                <h4 class="card-prix"><%= item.prix %> €</h4>
+                            </br>
+                                    <div class="row">
+                                      <div class="col-sm">
+                                        Kilométrage:</br><%= item.kilometrage %> km
+                                      </div>
+                                      <div class="col-sm">
+                                        Année:</br><%= item.annee %>
+                                      </div>
+                                      <div class="col-sm">
+                                        Code postal:</br><h5><%= item.codepostal %></h5>
+                                      </div>
+                                    </div>
+                                    </br>
+                                    <div class="row">
+                                        <div class="bouttons-annonces">
+                                            <a href="/annonce/get/<%= item.idannonce %>" class="btn btn-sm btn-primary">Voir</a>
+                                        </div>
+                                        <div class="bouttons-annonces">
+                                            <a href="/annonce/edit/<%= item.idannonce %>" class="btn btn-sm btn-primary">Modifier</a>
+                                        </div>
+                                        <div class="bouttons-annonces">
+                                            <a href="/annonce/delete/<%= item.idannonce %>" class="btn btn-sm btn-danger">Supprimer</a>
+                                        </div>
+                                      </div>  
+                            </div>
+                        </div>
+          
+                    </div>
+                </div>
+            </div>
+        </br>
+        
+        <% }); %>
+    </tbody>
+</div>
+</br>
+
+<%- include('footer.ejs') %>
+
+
+

@@ -1,0 +1,40 @@
+
+<%- include('header.ejs') %>
+<body>
+    <div class="container p-5">                               
+                            <div class="introsignup">S'inscrire sur Car for Sale</div>
+                            <form role="form" method="post" action="/signup" onSubmit="return checkblank(this);">
+                                <% if (message.length > 0) { %>
+                            <div class="nomdescases"><%= message %></div><% } %>
+                                <div id="signupalert" style="display:none" class="alert alert-danger">
+                                    <p>Error:</p>
+                                    <span></span>
+                                </div>
+                                <div class="infosignup">
+                                    <label for="login" class="nomdescases">Pseudo</label>
+                                    <div class="cases">
+                                        <input type="text" class="cases" name="login" placeholder="Votre pseudo" required aria-label="Pseudo"> 
+                                    </div>
+                                </div>
+                                <div class="infosignup">
+                                    <label for="telephone" class="nomdescases">Téléphone</label>
+                                    <div class="cases">
+                                        <input type="text" class="cases" name="telephone" placeholder="048372873" required aria-label="Droits">
+                                    </div>
+                                </div> 
+                                <div class="infosignup">
+                                    <label for="password" class="nomdescases">Mot de passe (minimum 6 caractères)</label>
+                                    <div class="cases">
+                                        <input type="password" class="cases" name="password" placeholder="Mot de passe" required aria-label="Mot de passe">
+                                    </div>
+                                </div>
+                                <div class="infosignup"></div>
+                                    <!-- Button -->                                       
+                                    <div class="login">
+                                        <button id="login" type="submit" class="btn btn-info"> &nbsp S'inscrire</button>    
+                                    </div>
+                                </div>   
+                            </form>
+         </div>
+    </div>
+    <%- include('footer.ejs') %>

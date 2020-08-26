@@ -1,0 +1,54 @@
+<%- include('header.ejs') %>
+
+<div class="intro">
+</br>
+<input type="text" id="Larecherche" onkeyup="Recherche()" placeholder="Recherchez une annonce...">
+</br></br>
+
+<p>Voici les voitures en vente actuellement</p>
+</div>
+<div class="container" id="Lesskins">
+
+ <!--h2><%= title %></h2>-->
+</br></br>
+  <!--<a href="/skin/add" class="btn btn-sm btn-primary">Mettre en vente un skin</a><br/>-->
+  <table id="Lesskins2" class="w-100 p-3 table table-dark table-striped">
+    <thead>
+      <tr>
+        <th>Marque</th>
+        <th>Modèle</th>
+        <th>Année</th>
+        <th>Kilométrage</th>
+        <th>Prix</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% annonce.forEach(function(item){ %>
+            <tr>
+              <td><%= item.marque %></td>
+              <td><%= item.modele %></td>
+              <td><%= item.annee %></td>
+              <td><%= item.kilometrage %></td>
+              <td><%= item.prix %> €</td>
+        
+                <td>
+                    <a href="/annonce/get/<%= item.idannonce %>" class="btn btn-sm btn-primary">Voir</a>
+                    <a href="/annonce/edit/<%= item.idannonce %>" class="btn btn-sm btn-primary">Modifier</a>
+                    <a href="/annonce/delete/<%= item.idannonce %>" class="btn btn-sm btn-danger">Supprimer</a>
+                    <!--<a href="/cart/<%= item.id %>" class="btn btn-sm btn-success">Acheter</a>-->
+                </td>
+            </tr>
+
+
+        
+
+
+
+
+
+        <% }); %>
+    </tbody>
+</div>
+</br>
+
+<%- include('footer.ejs') %>

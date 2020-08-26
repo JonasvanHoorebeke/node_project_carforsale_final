@@ -1,0 +1,119 @@
+
+<%- include('header.ejs') %>
+<div class="container p-5">
+  <h2 class="introsignup">Vendre un véhicule? C'est très simple!</h2>
+  <p>Décrivez-nous votre véhicule</p>
+  <form action="/annonce/save" method="post">
+    <div class="infosignup">
+        <label for="marque" class="nomdescases">Marque:</label>
+        <input type="text" class="form-control" id="marque" placeholder="Peugeot" name="marque" required autofocus>
+    </div>    
+    <div class="infosignup">
+        <label for="modele" class="nomdescases">Modèle:</label>
+        <input type="text" class="form-control" id="modele" placeholder="208" name="modele" required aria-label="modele">
+    </div>
+    <div class="infosignup">
+        <label for="annee" class="nomdescases">Année:</label>
+        <input type="number" class="form-control" id="annee" placeholder="2016" name="annee" required aria-label="annee">
+    </div>
+    <div class="infosignup">
+        <label for="kilometrage" class="nomdescases">Kilométrage:</label>
+        <input type="number" class="form-control" id="kilometrage" placeholder="110750 km" name="kilometrage" required aria-label="kilometrage">
+    </div>
+    <div class="infosignup">
+        <label for="prix" class="nomdescases">Prix:</label>
+        <input type="number" class="form-control" id="pwd" placeholder="10 500 euros" name="prix" required aria-label="prix">
+    </div>
+    <div class="infosignup">
+        <label for="description" class="nomdescases">Description:</label>
+        <textarea type="textarea" cols="40" rows="5" style="width:200px; height:100px;" class="form-control" id="description" placeholder="Très bien entretenue" name="description" required aria-label="description"></textarea>
+    </div>
+    <div class="infosignup">
+        <label for="photo" class="nomdescases">Photo:</label>
+        <input type="text" class="form-control" id="photo" placeholder="Très bien entretenue" name="photo" required aria-label="photo">
+    </div>
+    <div class="infosignup">
+        <label for="codepostal" class="nomdescases">Code postal:</label>
+        <input type="text" class="form-control" id="codepostal" placeholder="1000" name="codepostal" required aria-label="codepostal">
+    </div>
+    <!--div class="infosignup">
+        <label for="idcateg" class="nomdescases">Catégorie: (1 = ancien , 2 = récent, 3 = neuf)</label>
+        <input type="text" class="form-control" id="categ" placeholder="2" name="idcateg" required>
+    </div-->
+    <!--<div class="infosignup">
+        <label for="idcateg" class="nomdescases">Catégorie   :   (1 = ancien , 2 = récent, 3 = neuf)&nbsp&nbsp&nbsp&nbsp</label>
+            <select id="idcateg" name="idcateg" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+    </div>
+    <div class="infosignup">
+        <label for="idrare" class="nomdescases">Catégorie   :   (1 = Commun , 2 = Peu commun, 3 = Rare, 4 = Mythique)&nbsp&nbsp&nbsp&nbsp</label>
+            <select id="idrare" name="idrare" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+    </div>-->
+    <div class="login">
+    <button type="submit" class="btn btn-primary" class="login">Soumettre le skin</button>
+</div>
+</form>
+
+
+
+<h1>Vendre un véhicule</h1>
+</div>
+</div>
+<form class="form-group shadow p-3 mb-5 text-black bg-white rounded" method='post'>
+<div class="form-group row">
+    <label for="inputMarque" class="col-sm-2 col-form-label">Marque</label>
+    <div class="col-sm-10">
+      <input type="marque" class="form-control" id="inputMarque" name='marque'>
+    </div>
+</div> 
+<div class="form-group row">
+    <label for="inputModele" class="col-sm-2 col-form-label">Modèle</label>
+    <div class="col-sm-10">
+      <input type="modele" class="form-control" id="inputModèle" name='modele'>
+    </div>
+</div>
+<div class="form-group row">
+    <label for="inputAnnee" class="col-sm-2 col-form-label">Année</label>
+    <div class="col-sm-10">
+      <input type="annee" class="form-control" id="inputAnnée" name='annee'>
+    </div>
+</div>
+<div class="form-group row">
+    <label for="inputKilometrage" class="col-sm-2 col-form-label">Kilométrage</label>
+    <div class="col-sm-10">
+      <input type="kilometrage" class="form-control" id="inputKilometrage" name='kilometrage'>
+    </div>
+</div>
+<div class="form-group row">
+    <label for="textDescription" class="col-sm-2 col-form-label">Description</label>
+    <div class="col-sm-10">
+        <input type="description" class="form-control" id="textDescription" name='description'></textarea>
+    </div>
+</div> 
+<div class="row" class="form-group row">
+    <label for="inputPrix" class="col-sm-2 col-form-label">Prix</label>
+    <div class="col-sm-10">
+      <input type="prix" class="form-control" id="inputPrix" name='prix'>
+</div> 
+</div>
+</br>
+<button class="btn btn-secondary btn-lg active col-md-6 offset-md-3">Publier votre annonce</button>
+    <input type="hidden"/> 
+</form>
+
+
+
+
+
+
+</div>
+</br></br></br></br></br>
+<%- include('footer.ejs') %>

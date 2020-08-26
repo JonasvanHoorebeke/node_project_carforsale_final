@@ -1,0 +1,98 @@
+<%- include('header.ejs') %>
+
+<div class="intro">
+</br>
+<input type="text" id="Larecherche" onkeyup="Recherche()" placeholder="Recherchez une annonce...">
+</br></br>
+
+<p>Voici les véhicules en vente actuellement</p>
+</div>
+<div class="container" id="Lesskins">
+
+ <!--h2><%= title %></h2>-->
+</br></br>
+  <!--<a href="/skin/add" class="btn btn-sm btn-primary">Mettre en vente un véhicule</a><br/>-->
+  <table id="Lesskins2" class="table table-dark table-striped">
+    <thead>
+      <tr>
+        <th>Marque</th>
+        <th>Modèle</th>
+        <th>Année</th>
+        <th>Kilométrage</th>
+        <th>Prix</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% annonce.forEach(function(item){ %>
+            <tr>
+              <td><%= item.marque %></td>
+              <td><%= item.modele %></td>
+              <td><%= item.annee %></td>
+              <td><%= item.kilometrage %></td>
+              <td><%= item.prix %> €</td>
+        
+                <td>
+                    <a href="/annonce/get/<%= item.idannonce %>" class="btn btn-sm btn-primary">Voir</a>
+                    <a href="/annonce/edit/<%= item.idannonce %>" class="btn btn-sm btn-primary">Modifier</a>
+                    <a href="/annonce/delete/<%= item.idannonce %>" class="btn btn-sm btn-danger">Supprimer</a>
+                    <!--<a href="/cart/<%= item.id %>" class="btn btn-sm btn-success">Acheter</a>-->
+                </td>
+            </tr>
+
+            <div class="cards-annonces">
+                <div class="card" style="max-width: 100%;">
+                    <div class="row no-gutters">
+                        <div class="col-sm-5" style="background: #868e96;">
+                            <img src="/css/rsq8.jpg" class="card-img-top h-100" alt="...">
+                        </div>
+                        <div class="col-sm-7">
+                            <div class="card-body">
+                                <h5 class="card-marque-modele"><%= item.marque %> <%= item.modele %></h5>
+                            </br>
+                                <h3 class="card-prix"><%= item.prix %> €</h3>
+                            </br>
+                                    <div class="row">
+                                      <div class="col-sm">
+                                        Kilométrage:</br><%= item.kilometrage %> km
+                                      </div>
+                                      <div class="col-sm">
+                                        Année:</br><%= item.annee %>
+                                      </div>
+                                      <div class="col-sm">
+                                        Code postal:</br><%= item.annee %>
+                                      </div>
+                                    </div>
+                                    </br>
+                                    <div class="row">
+                                        <div>
+                                            <a href="/annonce/get/<%= item.idannonce %>" class="btn btn-sm btn-primary">Voir</a>
+                                        </div>
+                                        <div class="">
+                                            <a href="/annonce/edit/<%= item.idannonce %>" class="btn btn-sm btn-primary">Modifier</a>
+                                        </div>
+                                        <div class="">
+                                            <a href="/annonce/delete/<%= item.idannonce %>" class="btn btn-sm btn-danger">Supprimer</a>
+                                        </div>
+                                      </div>  
+                            </div>
+                        </div>
+          
+                    </div>
+                </div>
+            </div>
+        </br>
+        
+
+
+
+
+
+        <% }); %>
+    </tbody>
+</div>
+</br>
+
+<%- include('footer.ejs') %>
+
+
+

@@ -1,0 +1,35 @@
+<%- include('header.ejs') %>
+
+
+<div class="container p-5">
+    <h2 class="introsignup">Vous voulez modifier une info relative à votre compte ?</br> Il est nécessaire de se reconnecter pour que les changements soient effectifs.</h2>
+    <form action="/profil/update" method="post">
+      <input type="hidden" value="<%= users.iduser %>" name="iduser">
+      <div class="infosignup">
+          <label for="login"class="nomdescases">Pseudo</label>
+          <input type="text" class="form-control" id="login" placeholder="Entrer pseudo" value="<%= users.login %>" name="login" required aria-label="pseudo" autofocus>
+      </div>    
+      <div class="infosignup">
+          <label for="telephone" class="nomdescases"> Téléphone</label>
+          <input type="text" class="form-control" id="telephone" placeholder="Entrer téléphone" value="<%= users.telephone %>" name="telephone" required aria-label="telephone">
+      </div>
+      <div class="infosignup">
+          <label for="password" class="nomdescases">Mot de passe</label>
+          <input type="password" class="form-control" id="password" placeholder="Entrer mot de passe" value="<%= users.password %>" name="password" required aria-label="password">
+      </div>
+      <div class="login">
+      <button type="submit" class="btn btn-primary">Envoyer</button>
+  </div>
+  </div>
+  </form>
+
+
+
+
+
+
+
+
+
+
+<%- include('footer.ejs') %>

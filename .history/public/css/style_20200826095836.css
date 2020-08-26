@@ -1,0 +1,327 @@
+body
+{
+    background-color: grey;
+}
+
+
+/* Gérer la couleur des liens/boutons */
+
+nav a:link {
+    text-decoration : none;
+}
+
+nav a:hover {
+    color : rgb(0, 0, 0);
+}
+
+nav a:active {
+    text-decoration: none;
+}
+
+nav a:visited{
+    text-decoration : none;
+}
+
+.boutonfooter {
+        padding-left: 0px;
+        list-style: none;
+      }
+
+.footerr {
+        padding: 50px 0;
+        background-color: #cbcbcb;
+        color: grey; /*gère la couleur du copyright en bas*/
+        text-align: center;
+        opacity: 98%;
+        left : 0;
+        bottom : 0;
+        width: 100%;
+      }
+      
+.footerr ul {
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 0;
+      }
+
+.footerr li {
+        padding: 0 10px;
+      }
+           
+
+      
+ul {
+        margin-top: 0;
+        margin-bottom: 1rem;
+      }
+
+.bouton {
+    margin-right: .5rem;
+    display: inline-block;
+}
+
+.intro {
+    text-align: center;
+    background-color: #b0b0b0;
+    font-size: 20px;
+    opacity: 80%;
+    border-radius: 5px 5px 5px 5px;
+    width: 75%;
+    height: 10%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+}
+
+nav {
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 98%;
+}
+
+
+nav a { /*gère le logo skinfarmerz*/
+    color: #d3d3d3;
+}
+
+.boutonheader {
+    list-style: none;
+    display : inline;
+}
+
+ul.boutonheader {
+    list-style: none;
+    display : inline-flex;
+}
+
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.skinfarmers {
+    display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+.navbouton {
+    display: block;
+    padding: .5rem 1rem;
+    color: goldenrod;
+}
+
+.navboutonergo {
+    display: block;
+    padding: .5rem 1rem;   
+    color: goldenrod;
+}
+
+ul.boutonfooter a {
+    color: rgb(0, 0, 0)!important;
+}
+
+form {
+    margin-top: 2em;
+    background-color: #cac8c2;
+}
+
+
+#Lesskins {
+    border-radius: 10px;
+    margin-bottom: 200px;
+    min-height: 400px;
+}
+
+.titreadd {
+    color: #282536;
+}
+
+.titreproduit {
+    text-align: center;
+    color: #282536;
+    background-color: #241e2d;
+}
+
+.cartt {
+    text-align: center;
+    background-color: #282536;
+}
+
+.introcart {
+    text-align: center;
+    background-color: #282536;
+    color: #c1c1c1;
+}
+
+.itemm {
+    display: block;
+    color: #c1c1c1;
+    padding-top: 1rem;
+}
+
+.nomskin {
+    color: goldenrod;
+}
+
+
+.textintroregister {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.infos {
+    display: block;
+}
+
+.listtt {
+    display: block;
+    text-align: center;
+}
+
+#loginbox {
+    text-align: center;
+}
+
+.introsignup {
+    font-size: larger;
+    border-top: black solid;
+    border-bottom: black solid;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border: 2rem; 
+}
+
+#infoleg {
+    font-size: smaller;
+}
+
+.pascompte {
+    border-top: 1px solid#888;
+    color: goldenrod; 
+    padding-top:15px; 
+    font-size:85%;
+    padding-bottom: 1rem;
+    text-align: right;
+}
+
+.infologin {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.infosignup {
+    margin-bottom: 25px;
+    width: 30%;
+}
+
+.infosignupdescription {
+    margin-bottom: 25px;
+    width: 50%;
+}
+
+.nomdescases {
+}
+
+.cases {
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}  
+
+.navigation1 {
+    padding: .5rem 1rem;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+}
+
+input.cases {
+    text-align: center;
+}
+
+.imgskin {
+    max-width : 350px;
+}
+
+.imageskin {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.espacement {
+	margin-right: 20px;
+}
+
+.prixjeu {
+    background-color: #8296c7;
+    opacity: 90%;
+
+}
+
+.introitempage {
+        font-size: larger;
+        background-color: #282536;
+        opacity: 80%;
+        border-top: black solid;
+        border-bottom: black solid;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border: 2rem; 
+}
+
+.cards-annonces {
+        margin: 20px;        
+    
+}
+
+.col-sm {
+        text-align: center;
+        color: #000;
+        font-size: 14px; 
+}
+
+.col-sm-7{
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+}
+
+.bouttons-annonces {
+        text-align: center;
+
+}
+
+.card-prix{
+    padding-left: 10px ;
+
+}
+/*.navbari {
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: .5rem 1rem;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
